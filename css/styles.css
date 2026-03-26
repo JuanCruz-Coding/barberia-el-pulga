@@ -139,9 +139,7 @@ a:hover { color: var(--color-acento-hover); }
   text-align: center;
   padding: 5rem 1.5rem;
 
-  /* Reemplazá esto con una imagen real del local:
-     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../img/hero.jpg') center/cover no-repeat; */
-  background: linear-gradient(135deg, var(--color-fondo) 60%, #2d2020 100%);
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../img/hero.png') center/cover no-repeat;
 }
 .hero__content { max-width: 680px; }
 .hero__title {
