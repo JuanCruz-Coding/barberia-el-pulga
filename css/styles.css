@@ -1,0 +1,370 @@
+/* =============================================
+   BARBERÍA EL PULGA — styles.css
+   ============================================= */
+
+/* Variables */
+:root {
+  --color-fondo:       #1a1a1a;
+  --color-fondo-sec:   #2d2d2d;
+  --color-acento:      #c9a84c;
+  --color-acento-hover:#b8933a;
+  --color-texto:       #f5f5f5;
+  --color-texto-sec:   #aaaaaa;
+  --color-borde:       #3a3a3a;
+
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-cuerpo: 'Inter', sans-serif;
+
+  --radio:   8px;
+  --radio-lg: 14px;
+  --sombra:  0 2px 12px rgba(0,0,0,0.4);
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.7;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--color-acento); text-decoration: none; }
+a:hover { color: var(--color-acento-hover); }
+
+/* Utilidades */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.section-title {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--color-acento);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radio);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: none;
+}
+.btn--primary {
+  background: var(--color-acento);
+  color: #1a1a1a;
+}
+.btn--primary:hover {
+  background: var(--color-acento-hover);
+  color: #1a1a1a;
+  transform: translateY(-1px);
+}
+
+/* =====================
+   NAV
+   ===================== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-fondo);
+  border-bottom: 1px solid var(--color-borde);
+}
+.nav__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  color: var(--color-acento);
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+.nav__menu a {
+  font-size: 0.9rem;
+  color: var(--color-texto-sec);
+  transition: color 0.2s;
+}
+.nav__menu a:hover { color: var(--color-texto); }
+.nav__cta {
+  background: var(--color-acento);
+  color: #1a1a1a !important;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radio);
+  font-weight: 500;
+}
+.nav__cta:hover { background: var(--color-acento-hover); }
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-texto);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1.5rem;
+
+  /* Reemplazá esto con una imagen real del local:
+     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../img/hero.jpg') center/cover no-repeat; */
+  background: linear-gradient(135deg, var(--color-fondo) 60%, #2d2020 100%);
+}
+.hero__content { max-width: 680px; }
+.hero__title {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1.2;
+  color: var(--color-texto);
+  margin-bottom: 1.25rem;
+}
+.hero__title span { color: var(--color-acento); }
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--color-texto-sec);
+  margin-bottom: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================
+   SERVICIOS
+   ===================== */
+.servicios {
+  padding: 5rem 0;
+  background: var(--color-fondo-sec);
+}
+.servicios__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+.servicio-card {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.servicio-card:hover {
+  border-color: var(--color-acento);
+  transform: translateY(-4px);
+}
+.servicio-card__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.servicio-card__title {
+  font-family: var(--fuente-titulo);
+  font-size: 1.15rem;
+  color: var(--color-texto);
+  margin-bottom: 0.5rem;
+}
+.servicio-card__desc {
+  font-size: 0.88rem;
+  color: var(--color-texto-sec);
+  margin-bottom: 1rem;
+}
+.servicio-card__precio {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-acento);
+}
+
+/* =====================
+   NOSOTROS
+   ===================== */
+.nosotros {
+  padding: 5rem 0;
+}
+.nosotros__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.nosotros__text p {
+  color: var(--color-texto-sec);
+  margin-bottom: 1rem;
+}
+.nosotros__text .section-title { text-align: left; }
+.nosotros__img {
+  border-radius: var(--radio-lg);
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--color-fondo-sec);
+  min-height: 260px;
+}
+
+/* =====================
+   CONTACTO
+   ===================== */
+.contacto {
+  padding: 5rem 0;
+  background: var(--color-fondo-sec);
+}
+.contacto__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1.1rem;
+}
+.form-group label {
+  font-size: 0.88rem;
+  color: var(--color-texto-sec);
+}
+.form-group input,
+.form-group textarea {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 0.65rem 1rem;
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-acento);
+}
+.form-error {
+  font-size: 0.8rem;
+  color: #e25555;
+  min-height: 1rem;
+}
+.form-success {
+  font-size: 0.9rem;
+  color: #5dcaa5;
+  margin-top: 0.5rem;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-borde);
+}
+.info-item:last-child { border-bottom: none; }
+.info-item strong {
+  font-size: 0.85rem;
+  color: var(--color-acento);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.info-item span,
+.info-item a {
+  font-size: 0.95rem;
+  color: var(--color-texto-sec);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+.footer {
+  border-top: 1px solid var(--color-borde);
+  padding: 2rem 0;
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer__logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.1rem;
+  color: var(--color-acento);
+}
+.footer__copy {
+  font-size: 0.82rem;
+  color: var(--color-texto-sec);
+}
+.footer__links {
+  display: flex;
+  gap: 1.25rem;
+}
+.footer__links a {
+  font-size: 0.85rem;
+  color: var(--color-texto-sec);
+}
+.footer__links a:hover { color: var(--color-texto); }
+
+/* =====================
+   RESPONSIVO
+   ===================== */
+@media (max-width: 768px) {
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-fondo);
+    padding: 1rem 1.5rem 1.5rem;
+    border-bottom: 1px solid var(--color-borde);
+    gap: 1rem;
+  }
+  .nav__menu.open { display: flex; }
+  .nav__toggle { display: flex; }
+
+  .nosotros__inner,
+  .contacto__inner {
+    grid-template-columns: 1fr;
+  }
+  .nosotros__text .section-title { text-align: center; }
+
+  .footer__inner { flex-direction: column; text-align: center; }
+  .footer__links { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .servicios__grid { grid-template-columns: 1fr; }
+}

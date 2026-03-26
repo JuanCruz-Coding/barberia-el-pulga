@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbería El Pulga — Gobernador Gálvez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <header class="nav">
+    <div class="nav__container">
+      <a href="#inicio" class="nav__logo">El Pulga</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="nav__cta">Reservar turno</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__content">
+        <h1 class="hero__title">Tu mejor versión,<br>a un corte de distancia</h1>
+        <p class="hero__subtitle">Barbería profesional en Gobernador Gálvez. Cortes, barba y estilo con dedicación.</p>
+        <a href="#contacto" class="btn btn--primary">Reservar turno</a>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="servicios" id="servicios">
+      <div class="container">
+        <h2 class="section-title">Nuestros servicios</h2>
+        <div class="servicios__grid">
+
+          <div class="servicio-card">
+            <div class="servicio-card__icon">✂</div>
+            <h3 class="servicio-card__title">Corte de cabello</h3>
+            <p class="servicio-card__desc">Corte clásico o moderno adaptado a tu estilo y tipo de cabello.</p>
+            <span class="servicio-card__precio">Consultar precio</span>
+          </div>
+
+          <div class="servicio-card">
+            <div class="servicio-card__icon">🪒</div>
+            <h3 class="servicio-card__title">Corte de barba</h3>
+            <p class="servicio-card__desc">Perfilado y diseño de barba para un look prolijo y definido.</p>
+            <span class="servicio-card__precio">Consultar precio</span>
+          </div>
+
+          <div class="servicio-card">
+            <div class="servicio-card__icon">◈</div>
+            <h3 class="servicio-card__title">Diseño de cejas</h3>
+            <p class="servicio-card__desc">Definición y perfilado para un acabado limpio y natural.</p>
+            <span class="servicio-card__precio">Consultar precio</span>
+          </div>
+
+          <div class="servicio-card">
+            <div class="servicio-card__icon">◎</div>
+            <h3 class="servicio-card__title">Afeitado clásico</h3>
+            <p class="servicio-card__desc">Afeitado tradicional con navaja y toalla caliente. Una experiencia completa.</p>
+            <span class="servicio-card__precio">Consultar precio</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="nosotros" id="nosotros">
+      <div class="container nosotros__inner">
+        <div class="nosotros__text">
+          <h2 class="section-title">¿Quiénes somos?</h2>
+          <p>Somos una barbería familiar ubicada en Gobernador Gálvez, Santa Fe. Con años de experiencia en el oficio, nos especializamos en cortes modernos y clásicos, siempre con atención personalizada y dedicación.</p>
+          <p>Cada cliente es único y merece un servicio a su medida. Vení a conocernos.</p>
+        </div>
+        <div class="nosotros__img-wrap">
+          <img src="img/barberia-placeholder.jpg" alt="Interior de Barbería El Pulga" class="nosotros__img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+      <div class="container">
+        <h2 class="section-title">Reservá tu turno</h2>
+        <div class="contacto__inner">
+
+          <form class="contacto__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+              <span class="form-error" id="errorNombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" />
+              <span class="form-error" id="errorEmail"></span>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿Qué servicio te interesa? ¿Cuándo podés venir?"></textarea>
+              <span class="form-error" id="errorMensaje"></span>
+            </div>
+            <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+            <p class="form-success" id="formSuccess"></p>
+          </form>
+
+          <div class="contacto__info">
+            <div class="info-item">
+              <strong>Dirección</strong>
+              <span>Gobernador Gálvez, Santa Fe</span>
+            </div>
+            <div class="info-item">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/549XXXXXXXXXX" target="_blank">+54 9 XX XXXX-XXXX</a>
+            </div>
+            <div class="info-item">
+              <strong>Horarios</strong>
+              <span>Lunes a Sábado: 9:00 – 20:00</span>
+            </div>
+            <div class="info-item">
+              <strong>Instagram</strong>
+              <a href="https://instagram.com/barberia.elpulga" target="_blank">@barberia.elpulga</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">El Pulga</span>
+      <span class="footer__copy">© 2025 Barbería El Pulga — Gobernador Gálvez, Santa Fe</span>
+      <div class="footer__links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
